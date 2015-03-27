@@ -4,3 +4,9 @@
 [submodule "externals/Laptop-DSDT-Patch"]
 	path = externals/Laptop-DSDT-Patch
 	url = https://github.com/RehabMan/Laptop-DSDT-Patch
+[submodule "Laptop-DSDT-Patch"]
+	path = Laptop-DSDT-Patch
+	url = https://github.com/RehabMan/Laptop-DSDT-Patch
+[submodule "externals/ssdtPRGen.sh"]
+	path = externals/ssdtPRGen.sh
+	url = https://github.com/Piker-Alpha/ssdtPRGen.sh
