@@ -17,7 +17,7 @@ git_update()
 	cd ${REPO}
 	echo "${GREEN}[GIT]${OFF}: Updating local data to latest version"
 	
-	echo "${BLUE}[GIT]${OFF}: Updating to latest XPS9530-OSX git master"
+	echo "${BLUE}[GIT]${OFF}: Updating to latest PRECISION-M3800-OSX git master"
 	git pull
 	
 	echo "${BLUE}[GIT]${OFF}: Initializing Laptop-DSDT-Patch & ssdtPRgen"
