@@ -1,15 +1,15 @@
-*Credits and humble gratitude to [the-darkvoid](https://github.com/the-darkvoid) for without whom this project would not have been possible*  
+*Credits and humble gratitude to [the-darkvoid](https://github.com/the-darkvoid) for without whom this project would not have been possible.*  
 
 OS X Yosemite on Dell Precision M3800
 ====================================
 
-This repository contains documentation and research on the installation of OS X Yosemite (10.10) on the [Dell Precision M3800](http://www.dell.com/us/business/p/precision-m3800-workstation/pd) 
+This repository contains documentation and research on the installation of OS X Yosemite (10.10.2 as of this update) on the [Dell Precision M3800](http://www.dell.com/us/business/p/precision-m3800-workstation/pd).   
 
-This documentation is for the QHD+ 3200x1800 i7-4702/4712 model. There are sill many graphics issues with the slightly higher resolution 4K displays. This process is **very** specific, and must be followed with rigourous detail. The smallest deviation from my exact instructions could prevent a successful final system. Read through the entire guide before beginning, there are many housekeeping steps that much be done in advance, and be especially careful when patching your BIOS - incorrectly performing these steps can BRICK YOUR DEVICE. I am not responsible for any damage incurred as a result of misappropriately applying these steps.  
+The automated post-installation scripts contained herein are very specifically designed for the **3200x1800 QHD+** iteration of the device with i7-47x2HQ/HD-4600/Quadro-K1100M/mSATA-SSD hardware profile. There are sill unresolved graphics issues with the newly updated 3840x2160 4K displays. As it happens, this particular hardware configuration is highly temperamental during the initial setup, and as such, the underlying premise of this guide serves to sedulously circumvent the innumerable variables lurking to undermine an otherwise stable post-installation. Ergo, this process is **very** specific - it must be followed with rigorous detail. The smallest deviation from the subsequent instructions will inexorably precipitate a cataclysmic system crash, necessitating a completely new installation. I implore you to read through the entire guide before beginning, there are many housekeeping steps that much be done in advance, and be especially careful when patching your BIOS - incorrectly performing these steps can BRICK YOUR DEVICE. I am not responsible for any damage incurred as a result of misappropriately applying these steps. Before complaining or criticizing, be thankful that I have saved you from countless hours of frustration.   
 
-Covered topics in the [wiki](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki):
+The guide is comprised of the following covered topics in the [wiki](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki):
 
-  * [Unlocking the BIOS](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki/Unlocking%20the%20BIOS)
-  * [BIOS configuration](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki/BIOS%20Configuration)
-  * [OS X Installation](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki/Installation)
-  * [Post Installation](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki/Post%20Installation)
+  * [1. Unlocking the BIOS](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki/Unlocking%20the%20BIOS)
+  * [2. BIOS configuration](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki/BIOS%20Configuration)
+  * [3. OS X Installation](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki/Installation)
+  * [4. Post Installation](https://github.com/AustinSMU/PRECISION-M3800-OSX/wiki/Post%20Installation)
