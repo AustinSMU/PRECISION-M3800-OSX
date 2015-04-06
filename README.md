@@ -1,4 +1,4 @@
-*Credits and humble gratitude to [the-darkvoid](https://github.com/the-darkvoid) for without whom this project would not have been possible.*  
+*Credits and humble gratitude to [the-darkvoid](https://github.com/the-darkvoid) and [RehabMan](https://github.com/RehabMan) for without whom this project would not have been possible.*  
 
 OS X Yosemite on Dell Precision M3800
 ====================================
