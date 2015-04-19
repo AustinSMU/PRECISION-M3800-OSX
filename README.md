@@ -3,7 +3,7 @@
 OS X Yosemite on Dell Precision M3800
 ====================================
 
-This repository contains documentation and research on the installation of OS X Yosemite (10.10.2 as of this update) on the [Dell Precision M3800](http://www.dell.com/us/business/p/precision-m3800-workstation/pd).   
+This repository contains documentation and research on the installation of OS X Yosemite (10.10.3 as of this update) on the [Dell Precision M3800](http://www.dell.com/us/business/p/precision-m3800-workstation/pd).   
 
 The automated post-installation scripts contained herein are very specifically designed for the **3200x1800 QHD+** iteration of the device with i7-47x2HQ/HD-4600/Quadro-K1100M/mSATA-SSD hardware profile. There are sill unresolved graphics issues with the newly updated 3840x2160 4K displays. As it happens, this particular hardware configuration is highly temperamental during the initial setup, and as such, the underlying premise of this guide serves to sedulously circumvent the innumerable variables lurking to undermine an otherwise stable post-installation. Ergo, this process is **very** specific - it must be followed with rigorous detail. The smallest deviation from the subsequent instructions will inexorably precipitate a cataclysmic system crash, necessitating a completely new installation. I implore you to read through the entire guide before beginning, there are many housekeeping steps that much be done in advance, and be especially careful when patching your BIOS - incorrectly performing these steps can BRICK YOUR DEVICE. I am not responsible for any damage incurred as a result of inappropriately applying these steps. Before complaining or criticizing, be thankful that I have saved you from countless hours of frustration.   
 
