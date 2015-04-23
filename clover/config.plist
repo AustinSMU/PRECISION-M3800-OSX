@@ -123,7 +123,7 @@
 					<key>Ignore</key>
 					<false/>
 					<key>Path</key>
-					<string>\EFI\CLOVER\toold\SHELL2.efi</string>
+					<string>\EFI\CLOVER\tools\SHELL2.efi</string>
 					<key>Title</key>
 					<string>UEFI Shell 2.0</string>
 					<key>Volume</key>
