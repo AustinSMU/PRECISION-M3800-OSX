@@ -20,31 +20,27 @@
 			<key>DropOem</key>
 			<true/>
 			<key>Generate</key>
-			<false/>
+			<dict>
+				<key>CStates</key>
+				<false/>
+				<key>PStates</key>
+				<false/>
+			</dict>
 		</dict>
 		<key>SortOrder</key>
 		<array>
-			<string>SSDT-0.aml</string>
-			<string>SSDT-1.aml</string>
-			<string>SSDT-2.aml</string>
-			<string>SSDT-3.aml</string>
-			<string>SSDT-7.aml</string>
-			<string>SSDT-8.aml</string>
-			<string>SSDT-9.aml</string>
 			<string>SSDT-10.aml</string>
-			<string>SSDT-11.aml</string>
 			<string>SSDT-12.aml</string>
 			<string>SSDT-13.aml</string>
-			<string>SSDT-14.aml</string>
 			<string>SSDT-15.aml</string>
-			<string>SSDT-pr.aml</string>
-			<string>SSDT-rmne.aml</string>
+			<string>SSDT-16.aml</string>
+			<string>SSDT-17.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 kext-dev-mode=1</string>
+		<string>dart=0 kext-dev-mode=1 nv_disable=1</string>
 		<key>Debug</key>
 		<false/>
 		<key>Legacy</key>
@@ -52,7 +48,7 @@
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>10</integer>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<false/>
 	</dict>
@@ -118,34 +114,25 @@
 					<false/>
 					<key>Hidden</key>
 					<true/>
-					<key>Hotkey</key>
-					<string>B</string>
 					<key>Ignore</key>
 					<false/>
+					<key>NoCaches</key>
+					<false/>
 					<key>Path</key>
-					<string>\EFI\CLOVER\tools\SHELL2.efi</string>
+					<string>\EFI\EFI\CLOVER\tools\SHELL2.efi</string>
 					<key>Title</key>
-					<string>UEFI Shell 2.0</string>
+					<string>Shell 2.0</string>
 					<key>Volume</key>
 					<string>EFI</string>
 				</dict>
 			</array>
 		</dict>
-		<key>Hide</key>
-		<array>
-			<string>\EFI\BOOT\BOOTX64.EFI</string>
-			<string>System Reserved</string>
-		</array>
 		<key>Mouse</key>
 		<dict>
-			<key>DoubleClick</key>
-			<integer>500</integer>
 			<key>Enabled</key>
 			<false/>
 			<key>Mirror</key>
 			<false/>
-			<key>Speed</key>
-			<integer>8</integer>
 		</dict>
 		<key>Scan</key>
 		<dict>
@@ -170,8 +157,6 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
-		<key>InjectEDID</key>
-		<false/>
 		<key>ig-platform-id</key>
 		<string>0x0a2e0008</string>
 	</dict>
@@ -183,58 +168,34 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Enable eDP port 0x00, HDMI port 0x05 for Azul framebuffer 0x0a260006</string>
+				<string>Enable 96MB for Azul framebuffer 0x0a2e0008</string>
 				<key>Find</key>
 				<data>
-				AAAIAAIAAAAwAAAAAQUJAAAEAACHAAAA
+				CAAuCgEDAwMAAAAEAAAgAgAAUAEAAABgbAUAAGwFAAAA
+				AAAAAAAAAAAACAACAAAAMAAAAAEFCQAABAAABwEAAAIE
+				CgAABAAABwEAAA==
 				</data>
 				<key>Name</key>
 				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>
-				AAAIAAQAAAAwAAAAAQUJAAAIAACHAAAA
+				CAAuCgEDAwMAAAAGAAAgAgAAUAEAAABgbAUAAGwFAAAA
+				AAAAAAAAAAAACAAEAAAAMAAAAAEFCQAACAAABgAAAAIE
+				CgAABAAABgAAAA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Bootloader Graphics - Second Stage Patch 2</string>
+				<string>Enable USB3 after wake for Intel 8 series chipset</string>
 				<key>Find</key>
 				<data>
-				QYjE6xE=
+				xoDIAAAAAQ==
 				</data>
 				<key>Name</key>
-				<string>IOGraphicsFamily</string>
+				<string>AppleUSBXHCI</string>
 				<key>Replace</key>
 				<data>
-				QYjE6zE=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable Realtek ALC668 #2</string>
-				<key>Find</key>
-				<data>
-				hQjsEA==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable Realtek ALC668 #1</string>
-				<key>Find</key>
-				<data>
-				hAjsEA==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
+				xoDIAAAAAA==
 				</data>
 			</dict>
 			<dict>
@@ -253,6 +214,48 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Enable Realtek ALC668 #4</string>
+				<key>Find</key>
+				<data>
+				hBnUEQ==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				aAbsEA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>QECI HD4600 (GT2 Mobile to Desktop)</string>
+				<key>Find</key>
+				<data>
+				PYaAEgR0EOtd
+				</data>
+				<key>Name</key>
+				<string>AppleIntelHD5000Graphics</string>
+				<key>Replace</key>
+				<data>
+				PYaAFgR0EOtd
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Recognize 3rd party Wifi as Airport Extreme</string>
+				<key>Find</key>
+				<data>
+				axAAAHUN
+				</data>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>
+				axAAAJCQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Enable Realtek ALC668 #3</string>
 				<key>Find</key>
 				<data>
@@ -267,16 +270,44 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable 96MB BIOS, 34MB Framebuffer, 34MB Cursor for Azul framebuffer 0x0a260006</string>
+				<string>Replace Intel HDMI audio ID #1</string>
 				<key>Find</key>
 				<data>
-				BgAmCgEDAwMAAAACAAAwAQAAYAA=
+				PQsMAAA=
 				</data>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>AppleHDAController</string>
 				<key>Replace</key>
 				<data>
-				BgAmCgEDAwMAAAAGAAAgAgAAIAI=
+				PQwMAAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Bootloader Graphics - Second Stage Patch 1</string>
+				<key>Find</key>
+				<data>
+				hcB0XUg=
+				</data>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				McB0W0g=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable Realtek ALC668 #1</string>
+				<key>Find</key>
+				<data>
+				hAjsEA==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				AAAAAA==
 				</data>
 			</dict>
 			<dict>
@@ -284,27 +315,55 @@
 				<string>IOBluetoothFamily - Continuity &amp; Hand-off</string>
 				<key>Find</key>
 				<data>
-				SIXAdFwPt0gQg8kEg/kGdVBIiw==
+				i4eMAQAA
 				</data>
 				<key>Name</key>
 				<string>IOBluetoothFamily</string>
 				<key>Replace</key>
 				<data>
-				PsaDvAIAAAJBvg8AAADpTgAAAA==
+				uA8AAACQ
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable USB3 after wake for Intel 8 series chipset</string>
+				<string>Enable Realtek ALC668 #2</string>
 				<key>Find</key>
 				<data>
-				xoDIAAAAAQ==
+				hQjsEA==
 				</data>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>AppleHDA</string>
 				<key>Replace</key>
 				<data>
-				xoDIAAAAAA==
+				AAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Replace Intel HDMI audio ID #2</string>
+				<key>Find</key>
+				<data>
+				PQwKAAA=
+				</data>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>
+				PQwMAAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Bootloader Graphics - Second Stage Patch 2</string>
+				<key>Find</key>
+				<data>
+				QYjE6wM=
+				</data>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				QYjE6yM=
 				</data>
 			</dict>
 		</array>
@@ -321,16 +380,20 @@
 		<string>Mac-3CBD00234E554E41</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>OEXN6WE5MDVL5UC4L</string>
 		<key>BoardType</key>
 		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>MacBookPro11,2</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>08</string>
+		<string>8</string>
 		<key>Family</key>
-		<string>MacBook Pro</string>
+		<string>Macbook Pro</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
@@ -338,7 +401,7 @@
 		<key>ProductName</key>
 		<string>MacBookPro11,2</string>
 		<key>SerialNumber</key>
-		<string>C02LV67QFD56</string>
+		<string>C02LGXF7FD58</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
