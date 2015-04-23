@@ -81,6 +81,9 @@ patch_dsdt()
 	echo "${BOLD}[sys] Add IMEI${OFF}"
 	./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_IMEI.txt ./DSDT/decompiled/DSDT.dsl
 
+    echo "${BOLD}[sys] Fix PNOT/PPNT${OFF}"
+    ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_PNOT.txt ./DSDT/decompiled/DSDT.dsl
+
 	echo "${BOLD}[sys] Fix Non-zero Mutex${OFF}"
 	./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_Mutex.txt ./DSDT/decompiled/DSDT.dsl
 	
