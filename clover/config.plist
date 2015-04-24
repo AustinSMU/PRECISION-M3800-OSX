@@ -27,7 +27,7 @@
 				<false/>
 			</dict>
 		</dict>
-		<key>SortOrder</key>
+		<key>SortedOrder</key>
 		<array>
 			<string>SSDT-0.aml</string>
 			<string>SSDT-1.aml</string>
@@ -40,6 +40,7 @@
 			<string>SSDT-11.aml</string>
 			<string>SSDT-12.aml</string>
 			<string>SSDT-13.aml</string>
+			<string>SSDT-14.aml</string>
 			<string>SSDT-15.aml</string>
 			<string>SSDT-pr.aml</string>
 			<string>SSDT-rmne.aml</string>
@@ -122,14 +123,14 @@
 					<false/>
 					<key>Hidden</key>
 					<true/>
+					<key>Hotkey</key>
+					<string>B</string>
 					<key>Ignore</key>
-					<false/>
-					<key>NoCaches</key>
 					<false/>
 					<key>Path</key>
 					<string>\EFI\CLOVER\tools\SHELL2.efi</string>
 					<key>Title</key>
-					<string>Shell 2.0</string>
+					<string>UEFI Shell 2.0</string>
 					<key>Volume</key>
 					<string>EFI</string>
 				</dict>
@@ -190,20 +191,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable Realtek ALC668 #3</string>
-				<key>Find</key>
-				<data>
-				hBnUEQ==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				aAbsEA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Enable Realtek ALC668 #2</string>
 				<key>Find</key>
 				<data>
@@ -232,7 +219,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable Realtek ALC668 #4</string>
+				<string>Enable Realtek ALC668 #3</string>
 				<key>Find</key>
 				<data>
 				hBnUEQ==
@@ -246,10 +233,10 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Replace Intel HDMI audio ID #1</string>
+				<string>Replace Intel HDMI audio ID #2</string>
 				<key>Find</key>
 				<data>
-				PQsMAAA=
+				PQwKAAA=
 				</data>
 				<key>Name</key>
 				<string>AppleHDAController</string>
@@ -260,10 +247,10 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Replace Intel HDMI audio ID #2</string>
+				<string>Replace Intel HDMI audio ID #1</string>
 				<key>Find</key>
 				<data>
-				PQwKAAA=
+				PQsMAAA=
 				</data>
 				<key>Name</key>
 				<string>AppleHDAController</string>
@@ -348,20 +335,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Bootloader Graphics - Second Stage Patch 2</string>
-				<key>Find</key>
-				<data>
-				QYjE6wM=
-				</data>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				QYjE6yM=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Bootloader Graphics - Second Stage Patch 1</string>
 				<key>Find</key>
 				<data>
@@ -372,6 +345,20 @@
 				<key>Replace</key>
 				<data>
 				McB0W0g=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Bootloader Graphics - Second Stage Patch 2</string>
+				<key>Find</key>
+				<data>
+				QYjE6wM=
+				</data>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				QYjE6yM=
 				</data>
 			</dict>
 		</array>
@@ -389,7 +376,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>OEXN6WE5MDVL5UC4L</string>
+		<string>C02416?????FJRJ??</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -409,7 +396,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro11,2</string>
 		<key>SerialNumber</key>
-		<string>C02LGXF7FD58</string>
+		<string>C02M????FD56</string>
+		<key>SmUUID</key>
+		<string>88678bd5-998e-42c7-8eFF-????????????</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
