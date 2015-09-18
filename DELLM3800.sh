@@ -66,16 +66,14 @@ patch_dsdt()
     echo "${BOLD}[sys] SMBus Fix${OFF}"
     ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_SMBUS.txt ./DSDT/decompiled/DSDT.dsl
 
-    #echo "${BOLD}[sys] HPET Fix${OFF}" # (No HPETs available..), Check if boot / wakeup works
-    #./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_HPET.txt ./DSDT/decompiled/DSDT.dsl
+    echo "${BOLD}[sys] HPET Fix${OFF}"
+    ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_HPET.txt ./DSDT/decompiled/DSDT.dsl
 
     echo "${BOLD}[sys] OS Check Fix${OFF}"
-    #./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_OSYS.txt ./DSDT/decompiled/DSDT.dsl
     ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./DSDT/patches/system_OSYS.txt ./DSDT/decompiled/DSDT.dsl
 
     echo "${BOLD}[sys] AC Adapter Fix${OFF}"
     ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_ADP1.txt ./DSDT/decompiled/DSDT.dsl
-    #./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./DSDT/patches/system_AC.txt ./DSDT/decompiled/DSDT.dsl
 
     echo "${BOLD}[sys] Add MCHC${OFF}"
     ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_MCHC.txt ./DSDT/decompiled/DSDT.dsl
@@ -86,8 +84,8 @@ patch_dsdt()
     echo "${BOLD}[sys] Add IMEI${OFF}"
     ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_IMEI.txt ./DSDT/decompiled/DSDT.dsl
 
-    #echo "${BOLD}[sys] Fix PNOT/PPNT${OFF}"
-    #./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_PNOT.txt ./DSDT/decompiled/DSDT.dsl
+    echo "${BOLD}[sys] Fix PNOT/PPNT${OFF}"
+    ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_PNOT.txt ./DSDT/decompiled/DSDT.dsl
 
     echo "${BOLD}[sys] Fix Non-zero Mutex${OFF}"
     ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./externals/Laptop-DSDT-Patch/system/system_Mutex.txt ./DSDT/decompiled/DSDT.dsl
@@ -103,6 +101,9 @@ patch_dsdt()
 
     echo "${BOLD}Remove GLAN device${OFF}"
     ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./DSDT/patches/remove_glan.txt ./DSDT/decompiled/DSDT.dsl
+
+    echo "${BOLD}Rename EHCX to EH0X${OFF}"
+    ./tools/patchmatic ./DSDT/decompiled/DSDT.dsl ./DSDT/patches/usb_EHC_EHC0.txt ./DSDT/decompiled/DSDT.dsl
 
     ########################
     # SSDT-10 Patches
@@ -242,18 +243,6 @@ patch_iokit()
     sudo codesign -f -s - /System/Library/Frameworks/IOKit.framework/Versions/Current/IOKit
     echo "         Patched"
     ;;
-    "15f9046ff25c807b7c76db8cdaf6ae4c")
-    echo "         --> El Capitan 10.11 Beta 1 IOKit (${GREEN}unpatched${OFF})"
-    sudo perl -i.bak -pe 's|\xB8\x01\x00\x00\x00\xF6\xC1\x01\x0F\x85|\x33\xC0\x90\x90\x90\x90\x90\x90\x90\xE9|sg' /System/Library/Frameworks/IOKit.framework/Versions/Current/IOKit
-    sudo codesign -f -s - /System/Library/Frameworks/IOKit.framework/Versions/Current/IOKit
-    echo "         Patched"
-    ;;
-    "16e1320076417596176c919009f4b088")
-    echo "         --> El Capitan 10.11 Beta 2 IOKit (${GREEN}unpatched${OFF})"
-    sudo perl -i.bak -pe 's|\xB8\x01\x00\x00\x00\xF6\xC1\x01\x0F\x85|\x33\xC0\x90\x90\x90\x90\x90\x90\x90\xE9|sg' /System/Library/Frameworks/IOKit.framework/Versions/Current/IOKit
-    sudo codesign -f -s - /System/Library/Frameworks/IOKit.framework/Versions/Current/IOKit
-    echo "         Patched"
-    ;;
     "cd40217cd8d2ed8f16fa4ca513253109")
     echo "         --> El Capitan 10.11 GM IOKit (${GREEN}unpatched${OFF})"
     sudo perl -i.bak -pe 's|\xB8\x01\x00\x00\x00\xF6\xC1\x01\x0F\x85|\x33\xC0\x90\x90\x90\x90\x90\x90\x90\xE9|sg' /System/Library/Frameworks/IOKit.framework/Versions/Current/IOKit
@@ -269,12 +258,6 @@ patch_iokit()
     "4bd81492fd13e905ef10719ef391e8a0")
     echo "         --> Yosemite 10.10.3 / 10.10.4 / 10.10.5 IOKit (${RED}patched, not signed${OFF})"
     ;;
-    "1ab7c0ec047d11f6b40798b6f0107c0c")
-    echo "         --> El Capitan 10.11 Beta 1 IOKit (${RED}patched, not signed${OFF})"
-    ;;
-    "080b614971777a0b7022f0c19ba58f9b")
-    echo "         --> El Capitan 10.11 Beta 2 IOKit (${RED}patched, not signed${OFF})"
-    ;;
     "7eb8d7c5b98706c5e27bf294f929abf0")
     echo "         --> El Capitan 10.11 GM IOKit (${RED}patched, not signed${OFF})"
     ;;
@@ -288,14 +271,6 @@ patch_iokit()
     ;;
     "a045c1ac523fece1f1b083b2c5ee842c"|"4c99100b36f37df4bdcc5dc4cd2b8237")
     echo "         --> Yosemite 10.10.3 / 10.10.4 / 10.10.5 IOKit (${RED}patched${OFF})"
-    echo "         IOKit is already patched, no action taken."
-    ;;
-    "e96a04420555b71bb0933e26773575bc")
-    echo "         --> El Capitan 10.11 Beta 1 IOKit (${RED}patched${OFF})"
-    echo "         IOKit is already patched, no action taken."
-    ;;
-    "f0b2d73ac13c9211857af8707db9676d")
-    echo "         --> El Capitan 10.11 Beta 1 IOKit (${RED}patched${OFF})"
     echo "         IOKit is already patched, no action taken."
     ;;
     "bf69b91f7d76b4097426ad4c2f003af3")
