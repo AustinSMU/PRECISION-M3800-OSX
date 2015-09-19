@@ -155,7 +155,7 @@
 		<key>InjectEDID</key>
 		<false/>
 		<key>ig-platform-id</key>
-		<string>0x0a260006</string>
+		<string>0x0a2e0008</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -177,20 +177,6 @@
 				<key>Replace</key>
 				<data>
 				AAAAAAAAAAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Bootloader Graphics - Second Stage Patch 2</string>
-				<key>Find</key>
-				<data>
-				QYjE6xE=
-				</data>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				QYjE6zE=
 				</data>
 			</dict>
 			<dict>
