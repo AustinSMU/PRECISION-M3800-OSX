@@ -147,6 +147,8 @@ patch_dsdt()
     echo "${BOLD}[gfx] Rename GFX0 to IGPU${OFF}"
     ./tools/patchmatic ./DSDT/decompiled/SSDT-13.dsl ./externals/Laptop-DSDT-Patch/graphics/graphics_Rename-GFX0.txt ./DSDT/decompiled/SSDT-13.dsl
 
+    echo "${BOLD}Disable Nvidia card (Non-operational in OS X)${OFF}"
+    ./tools/patchmatic ./DSDT/decompiled/SSDT-13.dsl ./DSDT/patches/graphics_Disable_Nvidia.txt ./DSDT/decompiled/SSDT-13.dsl
     ########################
     # SSDT-15 Patches
     ########################
@@ -159,8 +161,6 @@ patch_dsdt()
     echo "${BOLD}[gfx] Rename GFX0 to IGPU${OFF}"
     ./tools/patchmatic ./DSDT/decompiled/SSDT-15.dsl ./externals/Laptop-DSDT-Patch/graphics/graphics_Rename-GFX0.txt ./DSDT/decompiled/SSDT-15.dsl
 
-    echo "${BOLD}Disable Nvidia card (Non-operational in OS X)${OFF}"
-    ./tools/patchmatic ./DSDT/decompiled/SSDT-15.dsl ./DSDT/patches/graphics_Disable_Nvidia.txt ./DSDT/decompiled/SSDT-15.dsl
     }
 
 compile_dsdt()
